@@ -1,0 +1,21 @@
+{
+  "name": "setup-hugo",
+  "version": "1.0.0",
+  "main": "lib/main.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && ncc build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.1.1",
+    "@actions/tool-cache": "^1.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@zeit/ncc": "^0.22.1",
+    "typescript": "^3.8.3"
+  }
+}
