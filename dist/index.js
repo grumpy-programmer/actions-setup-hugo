@@ -4366,7 +4366,7 @@ function run() {
     });
 }
 function assetFilter(asset) {
-    return asset.browser_download_url.endsWith('Linux-64bit.tar.gz') && asset.browser_download_url.indexOf('hugo_extended_') < 0;
+    return asset.browser_download_url.endsWith('Linux-64bit.tar.gz') && asset.browser_download_url.indexOf('hugo_extended_') >= 0;
 }
 run()
     .catch(e => core.error(e));

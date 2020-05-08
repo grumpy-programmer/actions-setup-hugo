@@ -56,7 +56,7 @@ async function run() {
 }
 
 function assetFilter(asset: Asset): boolean {
-  return asset.browser_download_url.endsWith('Linux-64bit.tar.gz') && asset.browser_download_url.indexOf('hugo_extended_') < 0;
+  return asset.browser_download_url.endsWith('Linux-64bit.tar.gz') && asset.browser_download_url.indexOf('hugo_extended_') >= 0;
 }
 
 
