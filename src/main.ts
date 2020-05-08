@@ -19,6 +19,7 @@ async function run() {
 
   if (cachePath != '') {
     core.info('loaded from cache');
+    core.addPath(cachePath);
     return;
   }
 
@@ -50,6 +51,8 @@ async function run() {
   const savedCachePath = await cache.cacheFile(hugoPath, 'hugo', 'hugo', tag);
 
   core.info('cache saved to ' + savedCachePath);
+
+  core.addPath(savedCachePath);
 }
 
 function assetFilter(asset: Asset): boolean {

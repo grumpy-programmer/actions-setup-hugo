@@ -4341,6 +4341,7 @@ function run() {
         const cachePath = cache.find('hugo', tag);
         if (cachePath != '') {
             core.info('loaded from cache');
+            core.addPath(cachePath);
             return;
         }
         core.info('not found in cache');
@@ -4361,6 +4362,7 @@ function run() {
         fs.chmodSync(hugoPath, mode);
         const savedCachePath = yield cache.cacheFile(hugoPath, 'hugo', 'hugo', tag);
         core.info('cache saved to ' + savedCachePath);
+        core.addPath(savedCachePath);
     });
 }
 function assetFilter(asset) {
