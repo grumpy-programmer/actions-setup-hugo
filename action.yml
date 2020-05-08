@@ -1,0 +1,10 @@
+name: 'Setup Hugo'
+description: 'Setup Hugo the world’s fastest framework for building websites'
+author: 'Grumpy Programmer'
+inputs:
+  version:
+    description: ''
+    default: 'latest'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
